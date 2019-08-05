@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GameOfLife
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/game_of_life`. To experiment with that code, run `bin/console` for an interactive prompt.
@@ -33,3 +34,14 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/game_of_life.
+=======
+# 2 Ruby Conway's game of life
+
+## The Game
+The Game of Life is not your typical computer game. It is a 'cellular automaton', and was invented by Cambridge mathematician John Conway.
+
+This game became widely known when it was mentioned in an article published by Scientific American in 1970. It consists of a collection of cells which, based on a few mathematical rules, can live, die or multiply. Depending on the initial conditions, the cells form various patterns throughout the course of the game.
+
+## Requirement
+- You must implement the game of life using ruby
+>>>>>>> eaa233a7c22a7fc3fffbf39da7b5ec9b69e0d364
