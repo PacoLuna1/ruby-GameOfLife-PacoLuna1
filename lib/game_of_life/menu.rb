@@ -1,7 +1,9 @@
-module GameOfLife 
+# frozen_string_literal: true
+
+module GameOfLife
+  # Menu
   class Menu
-    
-    def initialize(size,game)
+    def initialize(size, game)
       @size = size
       @game = game
     end
@@ -25,10 +27,9 @@ module GameOfLife
           position_column = gets.chomp.to_i
           @game.update_grid(position_row, position_column)
         end
-      when 2 
+      when 2
         @game.game_over
       end
-
     end
   end
 end
