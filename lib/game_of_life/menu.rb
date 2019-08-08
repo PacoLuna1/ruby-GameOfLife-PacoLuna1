@@ -1,10 +1,9 @@
 module GameOfLife 
   class Menu
     
-    def initialize(size,game,board)
+    def initialize(size,game)
       @size = size
       @game = game
-      @board = board
     end
 
     def print_menu
@@ -24,7 +23,7 @@ module GameOfLife
           position_row = gets.chomp.to_i
           puts 'Introduce a column:'
           position_column = gets.chomp.to_i
-          @board.update_grid(position_row, position_column)
+          @game.update_grid(position_row, position_column)
         end
       when 2 
         @game.game_over
