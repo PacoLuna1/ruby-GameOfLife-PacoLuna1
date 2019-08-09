@@ -21,7 +21,6 @@ module GameOfLife
     end
 
     def kill_cell(total)
-      total -= 1
       if total.between?(0, 1) || total.between?(4, 8)
         0
       elsif total.between?(2, 3)

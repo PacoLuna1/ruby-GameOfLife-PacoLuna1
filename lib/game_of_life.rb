@@ -12,10 +12,11 @@ print 'Introduce a size of the Game of life grid:'
 size = gets.chomp.to_i
 
 grid = Array.new(size) { Array.new(size) }
-board = GameOfLife::Board.new(size, grid, alive, dead)
+
+board = GameOfLife::Board.new(size, alive, dead, grid)
 game = GameOfLife::Game.new(size, grid)
 menu = GameOfLife::Menu.new(size, game, board)
-board.reset_game
+game.reset_game
 game.show_grid
 while game.play_again?(answer) != 1
   menu.print_menu

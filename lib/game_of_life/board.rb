@@ -3,7 +3,7 @@
 module GameOfLife
   # A game of life
   class Board < Game
-    def initialize(size, grid, alive, dead)
+    def initialize(size, alive, dead, grid)
       @size = size
       @grid = grid
       @alive = alive
@@ -65,26 +65,10 @@ module GameOfLife
       top.map { |value| total += value }
       bottom.map { |value| total += value }
       if vitality == @alive
+        total -= 1  
         kill_cell(total)
       else
         born_cell(total)
-      end
-    end
-
-    def kill_cell(total)
-      total -= 1
-      if total.between?(0, 1) || total.between?(4, 8)
-        0
-      elsif total.between?(2, 3)
-        1
-      end
-    end
-
-    def born_cell(total)
-      if total == 3
-        1
-      else
-        0
       end
     end
   end
